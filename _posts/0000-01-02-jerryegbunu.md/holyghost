@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+var today = new Date();
+	var hourNow = today.getHours();
+	var greeting;
+
+	if (hourNow > 18){
+		greeting='Good Evening'
+	}
+	else if (hourNow > 12){
+		greeting = 'Good Afternoon';
+	}
+	else if (hourNow > 0){
+		greeting = 'Good Morning';
+	}
+		else {
+			greeting = 'Welcome!';
+	}
+		document.write(greeting);
+	</script>
+	<script type="text/javascript">
+document.write ('<p>Current time is: <span id="date-time">', new Date().toLocaleString(), '<\/span>.<\/p>')
+if (document.getElementById) onload = function () {
+	setInterval ("document.getElementById ('date-time').firstChild.data = new Date().toLocaleString()", 50)
+}
+</script>
+
+   <ul>
+	<div class="topnav" id="myTopnav">
+	<li><a href ="home.html">HOME</a></li>
+	<li><a href ="aboutme.html">ABOUT</a></li>
+	<li><a href ="leadersprofile.html">LEADERS PROFILE</a></li>
+	<li><a href ="ministries.html">MINISTRIES</a></li>
+  <li><a href ="gallery.html">GALLERY</a></li>
+	<li><a href ="contact.html">CONTACT</a></li>
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i></a>
+	</ul> 
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div class="contact">
+<body>
+	
+	<h1>Contact page</h1>
+</div>
+<div class="opas">
+  
+<form>
+  First name:<br>
+  <input type="text" name="firstname"><br>
+  Last name:<br>
+  <input type="text" name="lastname"><br>
+   Email address:<br>
+  <input type="text" mail="email address"><br>
+   Number:<br>
+  <input type="number" number="number"><br>
+   Prayer Request:<br>
+  <textarea class ="textarea"></textarea><br>
+   <input type="submit" value="Submit">
+</form>
+</div>
+<script>
+<?php
+if(isset($_POST['email'])) {
+ 
+    // EDIT THE 2 LINES BELOW AS REQUIRED
+    $email_to = "jerryegbunu@gmail.com";
+    $email_subject = "Holy Ghost Hour Church";
+ <script>
+    function died($error) {
+        // your error code can go here
+        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+        echo "These errors appear below.<br /><br />";
+        echo $error."<br /><br />";
+        echo "Please go back and fix these errors.<br /><br />";
+        die();
+    }
+ 
+ 
+    // validation expected data exists
+    if(!isset($_POST['first_name']) ||
+        !isset($_POST['last_name']) ||
+        !isset($_POST['email']) ||
+        !isset($_POST['telephone']) ||
+        !isset($_POST['comments'])) {
+        died('We are sorry, but there appears to be a problem with the form you submitted.');       
+    }
+ 
+     
+ 
+    $First_name = $_POST['first_name']; // required
+    $Last_name = $_POST['last_name']; // required
+    $Email_from = $_POST['email']; // required
+    $Number = $_POST['Number']; // not required
+    $Prayer Request = $_POST['Prayer Request']; // required
+ 
+    $error_message = "";
+    $Email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+ 
+  if(!preg_match($email_exp,$email_from)) {
+    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+  }
+ 
+    $string_exp = "/^[A-Za-z .'-]+$/";
+ 
+  if(!preg_match($string_exp,$first_name)) {
+    $error_message .= 'The First Name you entered does not appear to be valid.<br />';
+  }
+ 
+  if(!preg_match($string_exp,$last_name)) {
+    $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
+  }
+ 
+  if(strlen($comments) < 2) {
+    $error_message .= 'The Comments you entered do not appear to be valid.<br />';
+  }
+ 
+  if(strlen($error_message) > 0) {
+    died($error_message);
+  }
+ 
+    $Email_message = "Form details below.\n\n";
+ 
+     
+    function clean_string($string) {
+      $bad = array("content-type","bcc:","to:","cc:","href");
+      return str_replace($bad,"",$string);
+    }
+ 
+     
+ 
+    $email_message .= "First Name: ".clean_string($first_name)."\n";
+    $email_message .= "Last Name: ".clean_string($last_name)."\n";
+    $email_message .= "Email: ".clean_string($Email_from)."\n";
+    $email_message .= "Telephone: ".clean_string($telephone)."\n";
+    $email_message .= "Prayer request: ".clean_string($Prayer request)."\n";
+ 
+// create email headers
+$headers = 'From: '.$Email_from."\r\n".
+'Reply-To: '.$Email_from."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+@mail($email_to, $email_subject, $email_message, $headers);  
+?><
+?php
+ 
+}
+?>
+</script>
+<div class="footer">
+<footer >
+<a href="http://www.facebook.com/" target="_blank"class="fa fa-facebook"></a>
+<a href="http://www.twitter.com/" target="_blank" class="fa fa-twitter"></a>
+<a href="http://www.google.com/" target="_blank" class="fa fa-google"></a>
+<a href="http://www.youtube.com/" target="_blank" class="fa fa-youtube"></a>
+<a href="http://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+<a href="tel:+13472653363">Contact us at +13472653363</a>
+<div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!4v1573127323119!6m8!1m7!1syYEEFJpfAKbxrDhd46hpsw!2m2!1d40.81908699611589!2d-73.90390492676892!3f187.77!4f0!5f0.7820865974627469" width="250" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</div>
+<address> 
+  <a href="mailto:pastpong@aol.com">e-mail:</a><br>
+Visit us at:<br>
+HOLY GHOST HOUR CHURCH<BR>
+791 Westchester Avenue,<br>
+Bronx,<br>
+New York.<br>
+10455.<br>
+U.S.A.
+</address>
+</footer>
+</div>
+</body>
+</html>
